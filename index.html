@@ -16,10 +16,10 @@ var key = ["taste", "touch", "smell", "hear", "see"]
 	var compguessnum = Math.floor(Math.random() * key.length)
 	var compguessword = key[compguessnum]
 	var compguessmaster = compguessword.split("")
-
+	var correct = ""
 	console.log(compguessmaster)
 
-
+console.log(compguessword)
 
 	for (var g = 0; g < compguessmaster.length; g++) 
 	{
@@ -40,8 +40,20 @@ document.onkeyup = function(event) {
 
 var guess = event.key;
 
-	for (var g = 0; g < compguessmaster.length; g++) {
-		if  (guess === compguessmaster){
+for (var i = 0; i < compguessmaster.length; i++) {
+	if (guess === compguessmaster[i])
+		{var right = document.createElement("span")
+			var textright = document.createTextNode(guess)
+			right.appendChild(textright)
+			document.getElementById(guess).appendChild(right)}
+
+}
+
+
+	
+}
+			
+			/*
 			var right = document.createElement("span")
 			var textright = document.createTextNode(guess)
 			right.appendChild(textright)
@@ -57,7 +69,7 @@ var guess = event.key;
 }
 
 	
-	
+	*/ 
 			
 	
 
