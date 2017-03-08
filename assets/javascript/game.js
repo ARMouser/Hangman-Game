@@ -24,15 +24,14 @@ var key = ["prue", "piper", "phoebe", "paige", "three", "triad", "leo", "wyatt",
 		var attemptsleft = document.createTextNode(attempt)
 		attempts.appendChild(attemptsleft)
 		document.getElementById("tries").appendChild(attempts)
-	
 
 document.onkeyup = function(event) {
-
-var guess = event.key
+var alpha = event.keyCode || event.which
+if ((alpha >= 65) && (alpha<= 90))
+ {var guess = event.key}
 
 console.log(guess)
 var guessl = compguessmaster.indexOf(guess)
-
 
 	if ((guessl != -1 ) && (attempt > 0))
 		{var right = document.createElement("span")
@@ -40,10 +39,9 @@ var guessl = compguessmaster.indexOf(guess)
 			right.appendChild(textright)
 			document.getElementById(guess).innerHTML = guess
 		}
-
 		
 	else if (attempt >0)
-	 {
+	 	{
 			var guesslist = document.createElement("span")
 			var text = document.createTextNode(guess + ", ")
 			guesslist.appendChild(text)
@@ -52,7 +50,8 @@ var guessl = compguessmaster.indexOf(guess)
 			document.getElementById("tries").innerHTML = attempt
 		}
 	else {
-		alert("Nice Try! Refresh to try again!")
+		game()
+		
+		}
 	}
-}
 }
