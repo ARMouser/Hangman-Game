@@ -1,4 +1,9 @@
-var key = ["taste", "touch", "smell", "hear", "see"]
+window.onload = game()
+
+function game ()
+{
+
+var key = ["prue", "piper", "phoebe", "paige", "three", "triad", "leo", "wyatt", "cole", "balthazar", "witches", "whitelighter", "source"]
 	var compguessnum = Math.floor(Math.random() * key.length)
 	var compguessword = key[compguessnum]
 	var compguessmaster = compguessword.split("")
@@ -10,7 +15,7 @@ var key = ["taste", "touch", "smell", "hear", "see"]
 		var unknown = document.createElement("span")
 			var unguessed = document.createTextNode(" _ ")
 			unknown.appendChild(unguessed)
-			document.getElementById("index.html/hang").appendChild(unknown).setAttribute("id", compguessmaster[g]);
+			document.getElementById("hang").appendChild(unknown).setAttribute("id", compguessmaster[g]);
 	}
 
 
@@ -28,6 +33,7 @@ keycode = event.key
 if (keycode <= 90 && keycode >= 65)
 	{var guess= event.key
 	}
+
 console.log(guess)
 var guessl = compguessmaster.indexOf(guess)
 
@@ -52,4 +58,5 @@ var guessl = compguessmaster.indexOf(guess)
 	else {
 		alert("Nice Try! Refresh to try again!")
 	}
+}
 }
