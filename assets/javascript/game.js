@@ -28,11 +28,7 @@ var key = ["prue", "piper", "phoebe", "paige", "three", "triad", "leo", "wyatt",
 
 document.onkeyup = function(event) {
 
-keycode = event.key
-
-if (keycode <= 90 && keycode >= 65)
-	{var guess= event.key
-	}
+var guess = event.key
 
 console.log(guess)
 var guessl = compguessmaster.indexOf(guess)
@@ -53,7 +49,7 @@ var guessl = compguessmaster.indexOf(guess)
 			guesslist.appendChild(text)
 			document.getElementById("guesses").appendChild(guesslist)
 			attempt -= 1
-			document.getElementById("tries").innerHTML = "Guesses left: " + attempt
+			document.getElementById("tries").innerHTML = attempt
 		}
 	else {
 		alert("Nice Try! Refresh to try again!")

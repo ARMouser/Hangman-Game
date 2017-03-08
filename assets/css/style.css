@@ -1,6 +1,17 @@
 body {
 	background-color: black;
 	color: #f2f6f9;
+	font-family: 'Neucha', cursive;
+	font-size:32px;
+}
+.logo{
+	padding-top:20px;
+	width: 750px;
+	max-height:200px;
+	position:relative;
+	z-index: 1;
+	left:125px;
+
 }
 header {
 	max-width: 980px;
@@ -11,5 +22,38 @@ header {
 }
 h1 {
 	text-align: center;
-	font-size: 42px;
+	font-size: 55px;
+	position: relative;
+	z-index:2;
+	top: -10px;
+	left: 250px;
+	letter-spacing: 8px;
+	font-family: 'Calligraffitti', cursive;
+
+}
+#hang {
+	max-width: 1020px;
+	border: dotted 3px #f2f6f9;
+	height:200px;
+	margin:20px;
+	text-align:center;
+	padding-top:40px;
+	line-height: 48px;
+}
+#guesses, #guessed {
+	max-width: 500px;
+	border: dotted 3px #f2f6f9;
+	height:200px;
+	margin:20px;
+	text-align:center;
+	padding-top:40px;
+	line-height: 48px;
+}
+#guesses {
+	overflow:auto;
+}
+#guessed {
+	position:relative;
+	top:-265px;
+	left:520px;
 }
