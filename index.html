@@ -39,37 +39,26 @@ console.log(compguessword)
 document.onkeyup = function(event) {
 
 var guess = event.key;
+var guessl = compguessmaster.indexOf(guess)
 
-for (var i = 0; i < compguessmaster.length; i++) {
-	if (guess === compguessmaster[i])
+
+
+	if (guessl != -1 )
 		{var right = document.createElement("span")
 			var textright = document.createTextNode(guess)
 			right.appendChild(textright)
-			document.getElementById(guess).appendChild(right)}
-
-}
-
-
-	
-}
-			
-			/*
-			var right = document.createElement("span")
-			var textright = document.createTextNode(guess)
-			right.appendChild(textright)
-			document.getElementById("hang").appendChild(right)
+			document.getElementById(guess).innerHTML = guess
 		}
-		else {
+	else {
 			var guesslist = document.createElement("span")
 			var text = document.createTextNode(guess + ", ")
 			guesslist.appendChild(text)
 			document.getElementById("guesses").appendChild(guesslist)
 		}
-	}
-}
+
 
 	
-	*/ 
+}
 			
 	
 
