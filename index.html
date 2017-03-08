@@ -5,67 +5,16 @@
 </head>
 <body>
 
+
 <h1> Type a letter!</h1>
 
 <div id="hang">Correct: </div>
 <div id="guesses">Guesses: </div>
 <div id= "tries"> Guesses left: </div>
-<script type="text/javascript">
 
-var key = ["taste", "touch", "smell", "hear", "see"]
-	var compguessnum = Math.floor(Math.random() * key.length)
-	var compguessword = key[compguessnum]
-	var compguessmaster = compguessword.split("")
-	var correct = ""
-	console.log(compguessmaster)
-
-	for (var g = 0; g < compguessmaster.length; g++) 
-	{
-		var unknown = document.createElement("span")
-			var unguessed = document.createTextNode(" _ ")
-			unknown.appendChild(unguessed)
-			document.getElementById("hang").appendChild(unknown).setAttribute("id", compguessmaster[g]);
-	}
+<script src="assets/javascript/game.js"></script>
 
 
-	var attempt = 15
-		var attempts = document.createElement("span")
-		var attemptsleft = document.createTextNode(attempt)
-		attempts.appendChild(attemptsleft)
-		document.getElementById("tries").appendChild(attempts)
-	
-document.onkeyup = function(event) {
-
-var guess = event.key;
-var guessl = compguessmaster.indexOf(guess)
-
-
-	if (guessl != -1 )
-		{var right = document.createElement("span")
-			var textright = document.createTextNode(guess)
-			right.appendChild(textright)
-			document.getElementById(guess).innerHTML = guess
-		}
-		
-	else {
-			var guesslist = document.createElement("span")
-			var text = document.createTextNode(guess + ", ")
-			guesslist.appendChild(text)
-			document.getElementById("guesses").appendChild(guesslist)
-			attempt -= 1
-			document.getElementById("tries").innerHTML = "Guesses left: " + attempt
-		}
-}
-			
-	
-
-
-	
-
-
-
-
-</script>
 </div>
 </body>
 </html>
