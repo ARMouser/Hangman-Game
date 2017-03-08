@@ -3,7 +3,7 @@ window.onload = game()
 function game ()
 {
 
-var key = ["taste", "touch", "smell", "hear", "see"]
+var key = ["prue", "piper", "phoebe", "paige", "three", "triad", "leo", "wyatt", "cole", "balthazar", "witches", "whitelighter", "source"]
 	var compguessnum = Math.floor(Math.random() * key.length)
 	var compguessword = key[compguessnum]
 	var compguessmaster = compguessword.split("")
@@ -33,6 +33,7 @@ keycode = event.key
 if (keycode <= 90 && keycode >= 65)
 	{var guess= event.key
 	}
+
 console.log(guess)
 var guessl = compguessmaster.indexOf(guess)
 

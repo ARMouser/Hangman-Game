@@ -1,0 +1,15 @@
+body {
+	background-color: black;
+	color: #f2f6f9;
+}
+header {
+	max-width: 980px;
+	min-width: 980px;
+	padding: 20px;
+	border: solid 5px #f2f6f9;
+	margin: 20px;
+}
+h1 {
+	text-align: center;
+	font-size: 42px;
+}
