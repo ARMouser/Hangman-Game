@@ -19,8 +19,6 @@ var key = ["taste", "touch", "smell", "hear", "see"]
 	var correct = ""
 	console.log(compguessmaster)
 
-console.log(compguessword)
-
 	for (var g = 0; g < compguessmaster.length; g++) 
 	{
 		var unknown = document.createElement("span")
@@ -42,22 +40,21 @@ var guess = event.key;
 var guessl = compguessmaster.indexOf(guess)
 
 
-
 	if (guessl != -1 )
 		{var right = document.createElement("span")
 			var textright = document.createTextNode(guess)
 			right.appendChild(textright)
 			document.getElementById(guess).innerHTML = guess
 		}
+		
 	else {
 			var guesslist = document.createElement("span")
 			var text = document.createTextNode(guess + ", ")
 			guesslist.appendChild(text)
 			document.getElementById("guesses").appendChild(guesslist)
+			attempt -= 1
+			document.getElementById("tries").innerHTML = "Guesses left: " + attempt
 		}
-
-
-	
 }
 			
 	
