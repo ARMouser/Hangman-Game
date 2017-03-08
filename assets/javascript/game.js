@@ -1,13 +1,12 @@
 window.onload = game()
 
+
 function game ()
 {
-
 var key = ["prue", "piper", "phoebe", "paige", "three", "triad", "leo", "wyatt", "cole", "balthazar", "witches", "whitelighter", "source"]
 	var compguessnum = Math.floor(Math.random() * key.length)
 	var compguessword = key[compguessnum]
 	var compguessmaster = compguessword.split("")
-	var correct = ""
 	console.log(compguessmaster)
 
 	for (var g = 0; g < compguessmaster.length; g++) 
@@ -25,16 +24,23 @@ var key = ["prue", "piper", "phoebe", "paige", "three", "triad", "leo", "wyatt",
 		attempts.appendChild(attemptsleft)
 		document.getElementById("tries").appendChild(attempts)
 
+
+
 document.onkeyup = function(event) {
 var alpha = event.keyCode || event.which
-if ((alpha >= 65) && (alpha<= 90))
- {var guess = event.key}
+	if ((alpha >= 65) && (alpha<= 90))
+ 		{var guess = event.key
+ 		}
+	else {
+		return
+		}
 
 console.log(guess)
 var guessl = compguessmaster.indexOf(guess)
 
 	if ((guessl != -1 ) && (attempt > 0))
-		{var right = document.createElement("span")
+		{
+			var right = document.createElement("span")
 			var textright = document.createTextNode(guess)
 			right.appendChild(textright)
 			document.getElementById(guess).innerHTML = guess
@@ -49,9 +55,12 @@ var guessl = compguessmaster.indexOf(guess)
 			attempt -= 1
 			document.getElementById("tries").innerHTML = attempt
 		}
+
 	else {
-		game()
-		
+			alert("The Power of Three Compels you to try again!")
+			document.getElementById("hang").innerhtml = ""
+			game()
+			document.getElementById("guesses").innerHTML = "Guesses:"
 		}
 	}
 }
